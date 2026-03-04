@@ -22,9 +22,23 @@ const material = new THREE.MeshStandardMaterial({
 const cube = new THREE.Mesh(geometry, material)
 scene.add(cube);
 
-camera.lookAt(cube.position);
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
 
-renderer.render(scene, camera);
+function onClick(event) {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(cube);
+    
+    if (intersects.length > 0) {
+        cube.material.color.setHSL(Math.random(), 1, 0.5);
+    }
+}
+
+document.addEventListener('click', onClick);
+
 
 function animate(){
     requestAnimationFrame(animate);
@@ -33,5 +47,7 @@ function animate(){
 
     renderer.render(scene, camera);
 }
+
+ camera.lookAt(cube.position);
 
 animate();

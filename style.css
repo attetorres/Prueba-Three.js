@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.info {
+    background-color: black;
+    padding: 16px;
+}
+
+.info h2 {
+    margin: 0 0 10px 0;
+    font-size: 40px;
+    color: #F3E500;
+}
+
+.info p {
+    margin: 0;
+    font-size: 25px;
+    color: white;
+}
