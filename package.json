@@ -1,0 +1,26 @@
+{
+  "name": "prueba-three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attetorres/Prueba-Three.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attetorres/Prueba-Three.js/issues"
+  },
+  "homepage": "https://github.com/attetorres/Prueba-Three.js#readme",
+  "dependencies": {
+    "three": "^0.183.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
